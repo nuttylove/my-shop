@@ -22,3 +22,4 @@ src/tailwind.output.sass
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+package-log.json
