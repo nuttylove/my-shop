@@ -18,8 +18,8 @@
     "start": "npm-run-all build:tailwind --parallel watch:tailwind start:react",
     "start:react": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test -- --coverage",
-    "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache",
+    "test": "react-scripts test",
+    "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache --coverage",
     "eject": "react-scripts eject",
     "deploy": "deploy"
   },
@@ -48,26 +48,5 @@
     "npm-run-all": "^4.1.5",
     "sass-loader": "^10.1.1",
     "tailwindcss": "^2.0.3"
-  },
-  "jest": {
-    "setupFilesAfterEnv": [
-      "<rootDir>/src/setupTests.js"
-    ],
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx}",
-      "!<rootDir>/node_modules/",
-      "!<rootDir>/public/"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "branches": 80,
-        "functions": 80,
-        "lines": 80,
-        "statements": 80
-      }
-    },
-    "coverageReporters": [
-      "text"
-    ]
   }
 }
