@@ -15,7 +15,6 @@
   "scripts": {
     "build:tailwind": "tailwindcss build src/tailwind.sass -o src/tailwind.output.sass",
     "watch:tailwind": "chokidar 'src/**/*.sass' 'src/**/*.sass' --ignore src/tailwind.output.sass -c 'npm run build:tailwind'",
-    "prebuild": "run-s build:tailwind",
     "start": "npm-run-all build:tailwind --parallel watch:tailwind start:react",
     "start:react": "react-scripts start",
     "build": "react-scripts build",
