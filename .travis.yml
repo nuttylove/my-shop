@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - 15
+cache:
+  directories:
+    - node_modules
+script:
+  - yarn test
+before_deploy:
+  - npm install netlify-cli -g
+  - yarn build
+deploy:
+  provider: script
+  edge: true
+  script: netlify deploy --dir=dist --prod
+  on:
+    branch: master
