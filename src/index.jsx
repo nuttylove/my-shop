@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './tailwind.sass';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { AppRouter } from './AppRouter';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <AppRouter>
+      {/* <App /> */}
+    </AppRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
