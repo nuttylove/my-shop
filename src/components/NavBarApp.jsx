@@ -12,7 +12,7 @@ const NavBarApp = ({ history }) => {
       	<img src={logo} width='50' height='50' alt='logo' />
 			</Navbar.Header> */}
         <Navbar.Body>
-				<Nav><img src={logo} width='50' height='50' alt='logo' /></<Nav>
+				<Nav><img src={logo} width='50' height='50' alt='logo' /></Nav>
 				<Nav pullRight>
 					<Nav.Item icon={<Icon icon='shopping-cart' size="2x" />} onClick={() => history.push('/cart')}>Cart ( {cart} )</Nav.Item>
 					<Nav.Item icon={<Icon icon='bars' size="2x" />} />
