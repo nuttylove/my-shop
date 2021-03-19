@@ -1,8 +1,8 @@
 // eslint-disable-next-line
-import React, { lazy, Suspense, useState, useEffect } from 'react';
+import React, { lazy, Suspense, useState, useEffect, useMemo } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Provider, connect } from 'react-redux';
-import store from './redux/index';
+import { Provider } from 'react-redux';
+import { initializeStore, stores } from './redux';
 import history from './history';
 import Routes from './Routes';
 
@@ -33,6 +33,8 @@ class ErrorBoundary extends React.Component {
 
 const AppRouter = ({ children }) => {
   const [mapRoute, setRoute] = useState([]);
+  const usingStore = initialState => useMemo(() => initializeStore(initialState), [initialState]);
+  const store = stores ?? usingStore({});
 
   useEffect(() => {
     setRoute(Routes);
@@ -55,4 +57,5 @@ const AppRouter = ({ children }) => {
   );
 };
 
-export default connect()(AppRouter);
+export default AppRouter;
+// export default connect()(AppRouter);
