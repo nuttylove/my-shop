@@ -8,13 +8,14 @@ const ProductCart = ({ history }) => {
   const [img, setImg] = useState([]);
 
   useEffect(() => {
-    setImg([...book].map(b => ({ ...ImageList.find(f => f.props.alt === b.name).props, quantity: b.quantity })));
+    setImg([...book].map(b => ({ ...ImageList.find(f => f.props.alt === b.name), quantity: b.quantity })));
     return () => setImg([]);
   }, [book]);
 
   return (
     <>
     <div className="grid-row">
+    {console.log(img)}
       {img.map((f, idx) => <span key={idx}><img {...f} className="cart-img" alt={f?.alt} /> {f?.alt} <span>{f?.quantity}</span></span>)}
     </div>
     </>
