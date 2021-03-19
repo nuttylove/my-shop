@@ -33,8 +33,7 @@ class ErrorBoundary extends React.Component {
 
 const AppRouter = ({ children }) => {
   const [mapRoute, setRoute] = useState([]);
-  const usingStore = initialState => useMemo(() => initializeStore(initialState), [initialState]);
-  const store = stores ?? usingStore({});
+  const store = stores || initializeStore({});
 
   useEffect(() => {
     setRoute(Routes);
