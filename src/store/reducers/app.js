@@ -1,15 +1,25 @@
-const defaultApp = {};
+const defaultApp = {
+	cart: 0,
+	book: [],
+	add: {}
+};
 
 export default function app(state, action) {
 	state = defaultApp;
 	switch (action.type) {
-		case 'ADD_BIRD':
+		case 'CON_BOOK': {
+			const book = [...state.book, state.add];
 			return {
 				...state,
+				cart: book.length,
+				book,
+				add: {}
 			};
-		case 'INCREMENT_BIRD':
+		}
+		case 'ADD_BOOK':
 			return {
-				...state
+				...state,
+				add: action.book
 			};
 		default:
 			return state;
