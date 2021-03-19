@@ -38,10 +38,10 @@ const ProductDetail = ({ history }) => {
       <span>Quantity 
         <Button appearance="ghost" onClick={() => setQuantity(n => n + 1)}>+</Button>
         <span>{quantity}</span>
-        <Button appearance="ghost" onClick={() => setQuantity(n => n - 1 ?? 1)}>-</Button>
+        <Button appearance="ghost" onClick={() => setQuantity(n => (n - 1) > 0 ? n - 1 : 1)}>-</Button>
       </span>
       <div className='grid-button'>
-        <Button appearance="ghost" size="lg" onClick={() => history.back()}>Back</Button>
+        <Button appearance="ghost" size="lg" onClick={() => history.goBack()}>Back</Button>
         <Button appearance="primary" size="lg" onClick={book()}>Book</Button>
       </div>
     </div>
