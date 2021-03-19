@@ -6,6 +6,7 @@ import { Button } from 'rsuite';
 const ProductDetail = () => {
   const { name } = useParams();
   const [img, setImg] = useState(null);
+  const [quantity, setQuantity] = useState(1);
 
   useEffect(() => {
     setImg({ ...ImageList.find(f => f.props.alt === name).props });
@@ -28,13 +29,13 @@ const ProductDetail = () => {
         <Button appearance="ghost">L</Button>
       </span>
       <span>Quantity 
-        <Button appearance="ghost">+</Button>
-        <span>1</span>
-        <Button appearance="ghost">-</Button>
+        <Button appearance="ghost" onClick={() => setQuantity(n => n + 1)}>+</Button>
+        <span>{quantity}</span>
+        <Button appearance="ghost" onClick={() => setQuantity(n => n - 1 ?? 1)}>-</Button>
       </span>
       <div className='grid-button'>
-      <Button appearance="ghost" size="lg">Back</Button>
-      <Button appearance="primary" size="lg">Book</Button>
+        <Button appearance="ghost" size="lg">Back</Button>
+        <Button appearance="primary" size="lg">Book</Button>
       </div>
     </div>
     </>
