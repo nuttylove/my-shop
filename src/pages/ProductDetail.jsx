@@ -14,7 +14,7 @@ const ProductDetail = ({ history }) => {
   const [color, setColor] = useState('Red');
 
   useEffect(() => {
-    setImg({ ...ImageList.find(f => f.props.alt === name).props });
+    setImg({ ...ImageList.find(f => f.props.alt === name) });
     return () => {
       setImg(null);
       setColor('red');
@@ -23,14 +23,14 @@ const ProductDetail = ({ history }) => {
   }, [name]);
 
   const book = async () => {
-    await dispatch(bookAdd({ quantity, color, size }));
+    await dispatch(bookAdd({ name, quantity, color, size }));
     history.push('/confirm');
   };
 
   return (
     <>
     <div className="grid-row">
-      <img {...img} className="detail-img" alt='detail' />
+      <img {...img?.props} className="detail-img" alt='detail' />
       <span>Name <span>{name}</span></span>
       <span>Color 
         <Button onClick={() => setColor('Red')} color="red" appearance="ghost">Red</Button>
