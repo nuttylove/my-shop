@@ -16,7 +16,7 @@ const ProductConfirm = ({ history }) => {
   return (
     <div className='layout'>
     <div className="grid-row">
-      <h2>Confirm Booking</h2>
+      <h5>Confirm Booking</h5>
       <span>Name <span>{add?.name}</span></span>
       <span>Color <span>{add?.color}</span></span>
       <span>Size <span>{add?.size}</span></span>
