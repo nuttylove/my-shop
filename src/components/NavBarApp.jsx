@@ -1,6 +1,7 @@
 import { Navbar, Nav, Icon } from 'rsuite';
 import logo from '../images/moomall-logo.png';
 import { useSelector } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 const NavBarApp = ({ history }) => {
 	const { cart } = useSelector(state => state.app);
