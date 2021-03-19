@@ -49,7 +49,7 @@ const ProductDetail = ({ history }) => {
       </span>
       <div className='grid-button'>
         <Button appearance="ghost" size="lg" onClick={() => history.goBack()}>Back</Button>
-        <Button appearance="primary" size="lg" onClick={book()}>Book</Button>
+        <Button appearance="primary" size="lg" onClick={() => book()}>Book</Button>
       </div>
     </div>
     </>

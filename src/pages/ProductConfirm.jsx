@@ -23,7 +23,7 @@ const ProductConfirm = ({ history }) => {
       <span>Quantity <span>{add?.quantity}</span></span>
       <div className='grid-button'>
         <Button appearance="ghost" size="lg" onClick={() => history.goBack()}>Back</Button>
-        <Button appearance="primary" size="lg" onClick={confirm()}>Confirm</Button>
+        <Button appearance="primary" size="lg" onClick={() => confirm()}>Confirm</Button>
       </div>
     </div>
     </>
