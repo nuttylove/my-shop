@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, withRouter } from 'react-router-dom';
 import ImageList from '../components/ImageList';
 import { Button } from 'rsuite';
 
-const ProductDetail = () => {
+const ProductDetail = ({ history }) => {
   const { name } = useParams();
   const [img, setImg] = useState(null);
   const [quantity, setQuantity] = useState(1);
@@ -17,6 +17,8 @@ const ProductDetail = () => {
       setColor('red');
     };
   }, [name]);
+
+  const book = () => console.log(quantity, color, size);
 
   return (
     <>
@@ -39,12 +41,12 @@ const ProductDetail = () => {
         <Button appearance="ghost" onClick={() => setQuantity(n => n - 1 ?? 1)}>-</Button>
       </span>
       <div className='grid-button'>
-        <Button appearance="ghost" size="lg">Back</Button>
-        <Button appearance="primary" size="lg">Book</Button>
+        <Button appearance="ghost" size="lg" onClick={() => history.back()}>Back</Button>
+        <Button appearance="primary" size="lg" onClick={book()}>Book</Button>
       </div>
     </div>
     </>
   );
 }
 
-export default ProductDetail;
+export default withRouter(ProductDetail);
