@@ -15,7 +15,7 @@ const ProductCart = ({ history }) => {
   return (
     <>
     <div className="grid-row">
-      {img.map((f, idx) => <div key={idx}><img {...f.props} className="cart-img" alt={f?.props?.alt} /><span>{f?.props?.alt}</span><span>{f?.quantity}</span></div>)}
+      {img.map((f, idx) => <span key={idx}><img {...f.props} className="cart-img" alt={f?.props?.alt} /><span>{f?.props?.alt}</span><span>{f?.quantity}</span></span>)}
     </div>
     </>
   );
