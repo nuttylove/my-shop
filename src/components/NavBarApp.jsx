@@ -2,7 +2,7 @@ import { Navbar, Nav, Icon } from 'rsuite';
 import logo from '../images/moomall-logo.png';
 import { useSelector } from 'react-redux';
 
-const NavBarApp = () => {
+const NavBarApp = ({ history }) => {
 	const { cart } = useSelector(state => state.app);
 	return (
 		<Navbar appearance='subtle'>
@@ -11,7 +11,7 @@ const NavBarApp = () => {
 			</Navbar.Header>
         <Navbar.Body>
 				<Nav pullRight>
-					<Nav.Item icon={<Icon icon='shopping-cart' size="2x" />}>Cart ( {cart} )</Nav.Item>
+					<Nav.Item icon={<Icon icon='shopping-cart' size="2x" />} onClick={() => history.push('/cart')}>Cart ( {cart} )</Nav.Item>
 					<Nav.Item icon={<Icon icon='bars' size="2x" />} />
 				</Nav>
         </Navbar.Body>
@@ -19,4 +19,4 @@ const NavBarApp = () => {
 	);
 };
 
-export default NavBarApp;
+export default withRouter(NavBarApp);

@@ -24,6 +24,7 @@ const ProductDetail = ({ history }) => {
 
   const book = () => {
     dispatch(bookAdd({ quantity, color, size }));
+    history.push('/confirm');
   };
 
   return (
