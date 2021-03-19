@@ -33,9 +33,9 @@ const ProductDetail = ({ history }) => {
       <img {...img} className="detail-img" alt='detail' />
       <span>Name <span>{name}</span></span>
       <span>Color 
-        <Button onClick={() => setColor('Red')} className='bg-black' color="red" appearance="ghost">Red</Button>
-        <Button onClick={() => setColor('Blue')} className='bg-black' color="blue" appearance="ghost">Blue</Button>
-        <Button onClick={() => setColor('Green')} className='bg-black' color="green" appearance="ghost">Green</Button>
+        <Button onClick={() => setColor('Red')} color="red" appearance="ghost">Red</Button>
+        <Button onClick={() => setColor('Blue')} color="blue" appearance="ghost">Blue</Button>
+        <Button onClick={() => setColor('Green')} color="green" appearance="ghost">Green</Button>
       </span>
       <span>Size 
         <Button onClick={() => setSize('S')}>S</Button>
