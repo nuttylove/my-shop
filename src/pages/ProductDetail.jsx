@@ -28,7 +28,7 @@ const ProductDetail = ({ history }) => {
   };
 
   return (
-    <>
+    <div className='layout'>
     <div className="grid-row">
       <img {...img?.props} className="detail-img" alt='detail' />
       <span>Name <span>{name}</span></span>
@@ -52,7 +52,7 @@ const ProductDetail = ({ history }) => {
         <Button appearance="primary" size="lg" onClick={() => book()}>Book</Button>
       </div>
     </div>
-    </>
+    </div>
   );
 }
 

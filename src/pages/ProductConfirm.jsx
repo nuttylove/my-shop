@@ -14,9 +14,9 @@ const ProductConfirm = ({ history }) => {
   };
 
   return (
-    <>
+    <div className='layout'>
     <div className="grid-row">
-      <p>Confirm Booking</p>
+      <h2>Confirm Booking</h2>
       <span>Name <span>{add?.name}</span></span>
       <span>Color <span>{add?.color}</span></span>
       <span>Size <span>{add?.size}</span></span>
@@ -26,7 +26,7 @@ const ProductConfirm = ({ history }) => {
         <Button appearance="primary" size="lg" onClick={() => confirm()}>Confirm</Button>
       </div>
     </div>
-    </>
+    </div>
   );
 }
 

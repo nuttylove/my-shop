@@ -7,12 +7,12 @@ const ProductList = () => {
   const [ slider ] = useState(ImageList);
 
   return (
-    <>
+    <div className='layout'>
     <Slide slider={slider} />
     <div className="grid-col">
       {slider.map(f => <Link key={f.key} to={`/detail/${f.props.alt}`}>{f}</Link>)}
     </div>
-    </>
+    </div>
   );
 }
 

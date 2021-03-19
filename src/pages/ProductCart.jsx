@@ -13,11 +13,11 @@ const ProductCart = ({ history }) => {
   }, [book]);
 
   return (
-    <>
+    <div className='layout'>
     <div className="grid-row">
       {img.map((f, idx) => <span key={idx}><img {...f.props} className="cart-img" alt={f?.props?.alt} /><span>{f?.props?.alt}</span><span>{f?.quantity}</span></span>)}
     </div>
-    </>
+    </div>
   );
 }
 
