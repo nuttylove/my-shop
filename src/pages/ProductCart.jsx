@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
 import ImageList from '../components/ImageList';
-import { useDispatch, useSelector } from 'react-redux';
-import { bookConfirm } from '../store/actions';
+import { useSelector } from 'react-redux';
 
 const ProductCart = ({ history }) => {
-  const dispatch = useDispatch();
   const { book } =  useSelector(state => state.app);
   const [img, setImg] = useState([]);
 
