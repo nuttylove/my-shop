@@ -22,8 +22,8 @@ const ProductDetail = ({ history }) => {
     };
   }, [name]);
 
-  const book = () => {
-    dispatch(bookAdd({ quantity, color, size }));
+  const book = async () => {
+    await dispatch(bookAdd({ quantity, color, size }));
     history.push('/confirm');
   };
 

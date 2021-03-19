@@ -8,8 +8,8 @@ const ProductConfirm = ({ history }) => {
   const dispatch = useDispatch();
   const { add } =  useSelector(state => state.app);
 
-  const confirm = () => {
-    dispatch(bookConfirm());
+  const confirm = async () => {
+    await dispatch(bookConfirm());
     history.push('/');
   };
 
