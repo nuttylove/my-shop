@@ -10,3 +10,70 @@ body
 
 code
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace
+
+.rs-navbar-header
+  margin: 10px 10px 5px 10px !important
+
+.rs-nav-item > a
+  height: 72px !important
+
+.slider-img
+  width: 100%
+  height: 400px
+  object-fit: cover
+  @media only screen and (max-width: 768px)
+    height: 150px
+
+.detail-img
+  width: 100%
+  height: 460px
+  object-fit: cover
+  @media only screen and (max-width: 768px)
+    height: 300px
+
+.alice-carousel__prev-btn, .alice-carousel__next-btn
+  display: none !important
+
+.grid-col
+  display: grid
+  grid-template-columns: repeat(2, minmax(0, 1fr))
+  gap: 1rem
+  margin: 1rem
+  align-items: center
+  justify-items: center
+  padding-top: 1rem
+  & > .slider-img
+    height: 260px
+  @media only screen and (max-width: 768px)
+    grid-template-columns: repeat(1, minmax(0, 1fr))
+    & > .slider-img
+      height: 200px
+
+.grid-row
+  display: grid
+  flex-direction: column
+  gap: 1rem
+  margin: 1.5rem
+  & > img
+    padding-bottom: 2rem
+  & > span
+    display: grid
+    grid-template-columns: repeat(4, minmax(0, 1fr))
+    margin-right: 1rem
+    margin-left: 1rem
+    & > span
+      margin-left: 1rem
+      align-self: center
+      justify-self: center
+    & > button
+      margin-left: 1rem
+
+.grid-button
+  padding-top: 2rem
+  display: flex
+  justify-content: center
+  gap: 1rem
+
+// .space-x-4
+//   margin-right: calc(1rem * var(0))
+//   margin-left: calc(1rem * calc(1 - var(0)))
