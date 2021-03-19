@@ -1,6 +1,7 @@
 import React from 'react';
 import AppRouter from './AppRouter';
 import NavBarApp from './components/NavBarApp';
+import { connect } from'react-redux';
 
 const App = () => {
 	return (
@@ -10,4 +11,4 @@ const App = () => {
 	);
 };
 
-export default App;
+export default connect()(App);
