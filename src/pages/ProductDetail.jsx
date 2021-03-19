@@ -15,7 +15,7 @@ const ProductDetail = () => {
   return (
     <>
     <div className="grid-row">
-      <img {...img} className="detail-img" />
+      <img {...img} className="detail-img" alt='detail' />
       <span>Name <span>{name}</span></span>
       <span>Color 
         <Button color="red" appearance="ghost">Red</Button>

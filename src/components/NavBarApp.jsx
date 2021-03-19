@@ -5,7 +5,7 @@ const NavBarApp = () => {
 	return (
 		<Navbar appearance='subtle'>
 			<Navbar.Header className='flex items-center justify-center'>
-        <img src={logo} width='50' height='50' />
+      <img src={logo} width='50' height='50' alt='logo' />
 			</Navbar.Header>
         <Navbar.Body>
 				<Nav pullRight>
