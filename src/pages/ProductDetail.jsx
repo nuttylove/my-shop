@@ -3,7 +3,7 @@ import { useParams, withRouter } from 'react-router-dom';
 import ImageList from '../components/ImageList';
 import { Button } from 'rsuite';
 import { useDispatch } from 'react-redux';
-import { bookAdd } from '../store/actions';
+import { bookAdd } from '../redux/actions';
 
 const ProductDetail = ({ history }) => {
   const { name } = useParams();

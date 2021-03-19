@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { Button } from 'rsuite';
 import { useDispatch, useSelector } from 'react-redux';
-import { bookConfirm } from '../store/actions';
+import { bookConfirm } from '../redux/actions';
 
 const ProductConfirm = ({ history }) => {
   const dispatch = useDispatch();

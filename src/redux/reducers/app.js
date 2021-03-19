@@ -4,8 +4,7 @@ const defaultApp = {
 	add: {}
 };
 
-export default function app(state, action) {
-	state = defaultApp;
+export default function app(state = defaultApp, action) {
 	switch (action.type) {
 		case 'CON_BOOK': {
 			const book = [...state.book, state.add];

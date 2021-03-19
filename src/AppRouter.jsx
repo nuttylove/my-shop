@@ -2,7 +2,7 @@
 import React, { lazy, Suspense, useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Provider, connect } from 'react-redux';
-import store from './store/index';
+import store from './redux/index';
 import history from './history';
 import Routes from './Routes';
 
