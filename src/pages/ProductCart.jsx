@@ -15,7 +15,7 @@ const ProductCart = ({ history }) => {
   return (
     <>
     <div className="grid-row">
-    {console.log(img)}
+    {console.log(img, book)}
       {img.map((f, idx) => <span key={idx}><img {...f} className="cart-img" alt={f?.alt} /> {f?.alt} <span>{f?.quantity}</span></span>)}
     </div>
     </>
