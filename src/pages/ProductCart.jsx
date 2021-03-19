@@ -10,7 +10,7 @@ const ProductCart = ({ history }) => {
   const [img, setImg] = useState([]);
 
   useEffect(() => {
-    setImg([...book].map(b => ({ ...ImageList.find(f => f.props.alt === b.name).props, quantity: d.quantity })));
+    setImg([...book].map(b => ({ ...ImageList.find(f => f.props.alt === b.name).props, quantity: b.quantity })));
     return () => setImg([]);
   }, [book]);
 
