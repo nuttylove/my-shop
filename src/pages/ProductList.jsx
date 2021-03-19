@@ -10,7 +10,7 @@ const ProductList = () => {
     <>
     <Slide slider={slider} />
     <div className="grid-col">
-      {slider.map(f => <Link key={f.key} to={`/detail/${f.props.alt}`)}>{f}</Link>)}
+      {slider.map(f => <Link key={f.key} to={`/detail/${f.props.alt}`}>{f}</Link>)}
     </div>
     </>
   );
